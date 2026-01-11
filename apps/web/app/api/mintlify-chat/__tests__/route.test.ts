@@ -124,9 +124,9 @@ describe("Mintlify Chat Proxy Endpoints", () => {
 
   describe("POST /api/mintlify-chat/message", () => {
     it("should send a message and stream response", async () => {
-      const mockMessage = "What is Cal.com?";
+      const mockMessage = "What is Bizcal?";
       const mockTopicId = "test-topic-123";
-      const mockResponse = "Cal.com is a scheduling platform.";
+      const mockResponse = "Bizcal is a scheduling platform.";
 
       // Create a mock ReadableStream
       const mockStream = new ReadableStream({

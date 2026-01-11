@@ -31,7 +31,7 @@ test.describe("Org", () => {
     test("Org Team Profile(/sales) page should be embeddable", async ({ page }) => {
       const response = await page.goto("https://i.cal.com/sales/embed");
       expect(response?.status()).toBe(200);
-      await expect(page.locator("text=Cal.com Sales")).toBeVisible();
+      await expect(page.locator("text=Bizcal Sales")).toBeVisible();
       const body = await response?.text();
       await expectPageToBeRenderedWithEmbedSsr(body);
     });
@@ -72,8 +72,8 @@ test.describe("Org", () => {
   test("Organization Homepage - Has Engineering and Marketing Teams", async ({ page }) => {
     const response = await page.goto("https://i.cal.com");
     expect(response?.status()).toBe(200);
-    // Somehow there are two Cal.com text momentarily, but shouldn't be the concern of this check
-    await expect(page.locator("text=Cal.com").first()).toBeVisible();
+    // Somehow there are two Bizcal text momentarily, but shouldn't be the concern of this check
+    await expect(page.locator("text=Bizcal").first()).toBeVisible();
     await expect(page.locator("text=Engineering")).toBeVisible();
     await expect(page.locator("text=Marketing")).toBeVisible();
   });
@@ -84,17 +84,17 @@ test.describe("Org", () => {
       await page.waitForLoadState("networkidle");
       expect(response?.status()).toBe(200);
       await page.click('text="Engineering"');
-      await expect(page.locator("text=Cal.com Engineering")).toBeVisible();
+      await expect(page.locator("text=Bizcal Engineering")).toBeVisible();
     });
 
     test("By /team/engineering", async ({ page }) => {
       await page.goto("https://i.cal.com/team/engineering");
-      await expect(page.locator("text=Cal.com Engineering")).toBeVisible();
+      await expect(page.locator("text=Bizcal Engineering")).toBeVisible();
     });
 
     test("By /engineering", async ({ page }) => {
       await page.goto("https://i.cal.com/engineering");
-      await expect(page.locator("text=Cal.com Engineering")).toBeVisible();
+      await expect(page.locator("text=Bizcal Engineering")).toBeVisible();
     });
   });
 });

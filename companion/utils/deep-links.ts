@@ -1,7 +1,7 @@
 /**
  * Deep Links Utility
  *
- * This module provides utilities for opening Cal.com web pages from the mobile app.
+ * This module provides utilities for opening Bizcal web pages from the mobile app.
  * Used for features that require server-side behavior that cannot be safely reproduced
  * client-side (e.g., request reschedule).
  */
@@ -9,15 +9,15 @@ import * as Linking from "expo-linking";
 import * as WebBrowser from "expo-web-browser";
 import { Alert } from "react-native";
 
-// Default Cal.com web URL - can be overridden for self-hosted instances
+// Default Bizcal web URL - can be overridden for self-hosted instances
 const DEFAULT_CAL_WEB_URL = "https://app.cal.com";
 
 /**
- * Get the Cal.com web URL from environment or use default
+ * Get the Bizcal web URL from environment or use default
  */
 function getCalWebUrl(): string {
   // In a real implementation, this would read from environment config
-  // For now, use the default Cal.com URL
+  // For now, use the default Bizcal URL
   return DEFAULT_CAL_WEB_URL;
 }
 

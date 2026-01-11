@@ -32,7 +32,7 @@ function getOrgProfileRedirectToVerifiedDomain(
   if (!team.isOrganization) {
     return null;
   }
-  // when this is not on a Cal.com page we don't auto redirect -
+  // when this is not on a Bizcal page we don't auto redirect -
   // good for diagnosis purposes.
   if (!IS_CALCOM) {
     return null;

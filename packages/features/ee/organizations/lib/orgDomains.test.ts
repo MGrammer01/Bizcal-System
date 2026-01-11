@@ -7,11 +7,11 @@ import {
 } from "@calcom/features/ee/organizations/lib/orgDomains";
 import * as constants from "@calcom/lib/constants";
 
-function setupEnvs({ WEBAPP_URL = "https://app.cal.com", WEBSITE_URL } = {}) {
+function setupEnvs({ WEBAPP_URL = "https://book.bizcalagency.com", WEBSITE_URL } = {}) {
   Object.defineProperty(constants, "WEBAPP_URL", { value: WEBAPP_URL });
   Object.defineProperty(constants, "WEBSITE_URL", { value: WEBSITE_URL });
   Object.defineProperty(constants, "ALLOWED_HOSTNAMES", {
-    value: ["cal.com", "cal.dev", "cal-staging.com", "cal.community", "cal.local:3000", "localhost:3000"],
+    value: ["book.bizcalagency.com","bizcalagency.com", "cal.com", "cal.dev", "cal-staging.com", "cal.community", "cal.local:3000", "localhost:3000"],
   });
   Object.defineProperty(constants, "RESERVED_SUBDOMAINS", {
     value: [

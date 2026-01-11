@@ -70,7 +70,7 @@ test.describe("SAML tests", () => {
 
     test("Submit button should be disabled with a premium username", async ({ page }) => {
       // eslint-disable-next-line playwright/no-skipped-test
-      test.skip(!IS_PREMIUM_USERNAME_ENABLED, "Only run on Cal.com");
+      test.skip(!IS_PREMIUM_USERNAME_ENABLED, "Only run on Bizcal");
 
       // Fill form
       await page.locator('input[name="username"]').fill("pro");

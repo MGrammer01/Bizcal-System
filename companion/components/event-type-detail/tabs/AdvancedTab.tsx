@@ -404,13 +404,13 @@ export function AdvancedTab(props: AdvancedTabProps) {
               onPress={() => {
                 Alert.alert(
                   "Select Timezone",
-                  "To change the timezone, please use the Cal.com website for the full timezone selector.",
+                  "To change the timezone, please use the Bizcal website for the full timezone selector.",
                   [
                     { text: "Cancel", style: "cancel" },
                     {
                       text: "Open Website",
                       onPress: () =>
-                        openInAppBrowser("https://app.cal.com/event-types", "Cal.com Event Types"),
+                        openInAppBrowser("https://app.cal.com/event-types", "Bizcal Event Types"),
                     },
                   ]
                 );

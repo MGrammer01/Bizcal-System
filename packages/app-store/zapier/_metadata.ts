@@ -9,7 +9,7 @@ export const metadata = {
   category: "automation",
   categories: ["automation"],
   logo: "icon.svg",
-  publisher: "Cal.com",
+  publisher: "Bizcal",
   slug: "zapier",
   title: "Zapier",
   type: "zapier_automation",

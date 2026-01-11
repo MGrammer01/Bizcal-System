@@ -11,7 +11,7 @@ import type { inferSSRProps } from "@lib/types/inferSSRProps";
 import type { getServerSideProps } from "@server/lib/auth/sso/direct/getServerSideProps";
 
 // This page is used to initiate the SAML authentication flow by redirecting to the SAML provider.
-// Accessible only on self-hosted Cal.com instances.
+// Accessible only on self-hosted Bizcal instances.
 
 export type SSODirectPageProps = inferSSRProps<typeof getServerSideProps>;
 export default function Page({ samlTenantID, samlProductID }: SSODirectPageProps) {

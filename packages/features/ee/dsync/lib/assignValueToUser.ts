@@ -223,7 +223,7 @@ export const buildPrismaQueriesForAttributeOptionToUser = ({
                 },
               }
             : null),
-          // No matter who assigned the attribute(Cal.com or SCIM), we delete it because the source of truth is SCIM and only one SCIM can be be source of truth at one time.
+          // No matter who assigned the attribute(Bizcal or SCIM), we delete it because the source of truth is SCIM and only one SCIM can be be source of truth at one time.
           attributeOption: {
             attribute: {
               id: {

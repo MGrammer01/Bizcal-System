@@ -34,17 +34,17 @@ function getCookies(): { [key: string]: string } {
   return cookies;
 }
 
-// Check for Cal.com session cookies
+// Check for Bizcal session cookies
 async function checkCalComSession(): Promise<WebSessionInfo> {
   if (!isWeb()) {
     return { isLoggedIn: false };
   }
 
   try {
-    // Check for common Cal.com session cookies
+    // Check for common Bizcal session cookies
     const cookies = getCookies();
 
-    // Look for Cal.com authentication cookies
+    // Look for Bizcal authentication cookies
     // Common patterns: next-auth.session-token, __Secure-next-auth.session-token, etc.
     const sessionCookieNames = [
       "next-auth.session-token",
@@ -58,7 +58,7 @@ async function checkCalComSession(): Promise<WebSessionInfo> {
     const foundSessionCookie = sessionCookieNames.find((name) => cookies[name]);
 
     if (foundSessionCookie) {
-      // Try to validate the session with Cal.com API
+      // Try to validate the session with Bizcal API
       const sessionInfo = await validateWebSession();
       return sessionInfo;
     }
@@ -69,7 +69,7 @@ async function checkCalComSession(): Promise<WebSessionInfo> {
   }
 }
 
-// Validate web session by calling Cal.com API with cookies
+// Validate web session by calling Bizcal API with cookies
 async function validateWebSession(): Promise<WebSessionInfo> {
   if (!isWeb()) {
     return { isLoggedIn: false };
@@ -101,7 +101,7 @@ async function validateWebSession(): Promise<WebSessionInfo> {
       }
     }
 
-    // Try the internal Cal.com me endpoint (this might work with cookies)
+    // Try the internal Bizcal me endpoint (this might work with cookies)
     const meResponse = await fetchWithTimeout(
       "https://app.cal.com/api/me",
       {
@@ -162,7 +162,7 @@ async function getTokensFromWebSession(): Promise<{ accessToken?: string; refres
   }
 
   try {
-    // Some Cal.com implementations might expose tokens via specific endpoints
+    // Some Bizcal implementations might expose tokens via specific endpoints
     // This is a fallback approach - in practice, web sessions might not expose tokens directly
 
     // Check localStorage/sessionStorage for any stored tokens
@@ -196,11 +196,11 @@ async function getTokensFromWebSession(): Promise<{ accessToken?: string; refres
   }
 }
 
-// Redirect to Cal.com web login instead of using WebView
+// Redirect to Bizcal web login instead of using WebView
 function redirectToWebLogin(): void {
   if (!isWeb()) return;
 
-  // For web, redirect directly to Cal.com login
+  // For web, redirect directly to Bizcal login
   const currentUrl = window.location.href;
   const loginUrl = `https://app.cal.com/auth/signin?callbackUrl=${encodeURIComponent(currentUrl)}`;
 

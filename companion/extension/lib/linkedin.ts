@@ -1,6 +1,6 @@
 /// <reference types="chrome" />
 
-// LinkedIn integration: inject a Cal.com scheduling button in LinkedIn messaging
+// LinkedIn integration: inject a Bizcal scheduling button in LinkedIn messaging
 
 // ============================================================================
 // Constants
@@ -131,7 +131,7 @@ export function initLinkedInIntegration() {
   let eventTypesCache: EventType[] | null = null;
   let cacheTimestamp: number | null = null;
 
-  console.log("[Cal.com] LinkedIn integration starting...");
+  console.log("[Bizcal] LinkedIn integration starting...");
 
   injectStyles();
 
@@ -144,7 +144,7 @@ export function initLinkedInIntegration() {
       CONSTANTS.SELECTORS.LEFT_ACTIONS
     );
 
-    console.log("[Cal.com] Found left-actions containers:", leftActionsContainers.length);
+    console.log("[Bizcal] Found left-actions containers:", leftActionsContainers.length);
 
     leftActionsContainers.forEach((leftActions) => {
       if (leftActions.querySelector(CONSTANTS.SELECTORS.CAL_BUTTON)) {
@@ -156,7 +156,7 @@ export function initLinkedInIntegration() {
       const sizes = isLargeContext ? CONSTANTS.BUTTON_SIZES.LARGE : CONSTANTS.BUTTON_SIZES.SMALL;
 
       console.log(
-        "[Cal.com] Injecting Cal.com button into LinkedIn messaging",
+        "[Bizcal] Injecting Bizcal button into LinkedIn messaging",
         isLargeContext ? "(large context)" : "(small context)"
       );
 
@@ -166,7 +166,7 @@ export function initLinkedInIntegration() {
 
       insertButtonIntoDOM(leftActions, calWrapper, emojiButtonContainer);
 
-      console.log("[Cal.com] Successfully injected Cal.com button");
+      console.log("[Bizcal] Successfully injected Bizcal button");
     });
   }
 
@@ -196,8 +196,8 @@ export function initLinkedInIntegration() {
     }`;
     button.className = buttonClass;
     button.type = "button";
-    button.title = "Schedule with Cal.com";
-    button.setAttribute("aria-label", "Schedule with Cal.com");
+    button.title = "Schedule with Bizcal";
+    button.setAttribute("aria-label", "Schedule with Bizcal");
 
     button.style.cssText = `
       display: inline-flex !important;

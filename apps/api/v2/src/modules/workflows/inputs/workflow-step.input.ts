@@ -89,7 +89,7 @@ export type RecipientType = (typeof RECIPIENT_TYPES)[number];
 export class BaseWorkflowMessageDto {
   @ApiProperty({
     description: "Subject of the message",
-    example: "Reminder: Your Meeting {EVENT_NAME} - {EVENT_DATE_ddd, MMM D, YYYY h:mma} with Cal.com",
+    example: "Reminder: Your Meeting {EVENT_NAME} - {EVENT_DATE_ddd, MMM D, YYYY h:mma} with Bizcal",
   })
   @IsString()
   subject!: string;

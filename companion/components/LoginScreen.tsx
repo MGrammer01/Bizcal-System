@@ -58,7 +58,7 @@ export function LoginScreen() {
           ]}
           activeOpacity={0.9}
         >
-          <Text className="text-[17px] font-semibold text-white">Continue with Cal.com</Text>
+          <Text className="text-[17px] font-semibold text-white">Continue with Bizcal</Text>
         </TouchableOpacity>
 
         {/* Sign up link */}

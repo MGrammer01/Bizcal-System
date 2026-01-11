@@ -39,7 +39,7 @@ describe("confirmHandler", () => {
     });
 
     const uidOfBooking = "hideNotes123";
-    const iCalUID = `${uidOfBooking}@Cal.com`;
+    const iCalUID = `${uidOfBooking}@Bizcal`;
 
     const plus1DateString = "2050-01-08";
 

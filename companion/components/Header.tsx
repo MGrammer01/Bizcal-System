@@ -43,7 +43,7 @@ export function Header() {
       className="flex-row items-center justify-between border-b border-[#E5E5EA] bg-white px-2 md:px-4"
       style={{ paddingTop: insets.top + 4, paddingBottom: 4 }}
     >
-      {/* Left: Cal.com Logo */}
+      {/* Left: Bizcal Logo */}
       <View className="ms-1">
         <CalComLogo width={101} height={22} color="#333" />
       </View>

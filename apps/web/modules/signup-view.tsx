@@ -763,7 +763,7 @@ export default function Signup({
                     <img
                       src="/product-cards/product-of-the-day.svg"
                       className="h-[34px] w-full dark:invert"
-                      alt="Cal.com was Product of the Day at ProductHunt"
+                      alt="Bizcal was Product of the Day at ProductHunt"
                     />
                   </div>
                   <div>
@@ -771,7 +771,7 @@ export default function Signup({
                     <img
                       src="/product-cards/product-of-the-week.svg"
                       className="h-[34px] w-full dark:invert"
-                      alt="Cal.com was Product of the Week at ProductHunt"
+                      alt="Bizcal was Product of the Week at ProductHunt"
                     />
                   </div>
                   <div>
@@ -779,7 +779,7 @@ export default function Signup({
                     <img
                       src="/product-cards/product-of-the-month.svg"
                       className="h-[34px] w-full dark:invert"
-                      alt="Cal.com was Product of the Month at ProductHunt"
+                      alt="Bizcal was Product of the Month at ProductHunt"
                     />
                   </div>
                 </div>
@@ -812,12 +812,12 @@ export default function Signup({
               </>
             )}
             <div className="border-default bg-black/3 hidden rounded-bl-2xl rounded-br-none rounded-tl-2xl border border-r-0 border-dashed dark:bg-white/5 lg:block lg:py-[6px] lg:pl-[6px]">
-              <img className="block dark:hidden" src="/mock-event-type-list.svg" alt="Cal.com Booking Page" />
+              <img className="block dark:hidden" src="/mock-event-type-list.svg" alt="Bizcal Booking Page" />
               {/* eslint-disable @next/next/no-img-element */}
               <img
                 className="hidden dark:block"
                 src="/mock-event-type-list-dark.svg"
-                alt="Cal.com Booking Page"
+                alt="Bizcal Booking Page"
               />
             </div>
             <div className="mr-12 mt-8 hidden h-full w-full grid-cols-3 gap-4 overflow-hidden lg:grid">

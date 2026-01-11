@@ -522,7 +522,7 @@ const nextConfig = (phase: string): NextConfig => {
         },
         {
           source: "/auth/new",
-          destination: process.env.NEXT_PUBLIC_WEBAPP_URL || "https://app.cal.com",
+          destination: process.env.NEXT_PUBLIC_WEBAPP_URL || "https://book.bizcalagency.com",
           permanent: true,
         },
         {

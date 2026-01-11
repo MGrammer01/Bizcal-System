@@ -121,7 +121,7 @@ export function parseGoogleChip(chipElement: HTMLElement): ParsedGoogleChip | nu
         .toLowerCase()
         .replace(/\s/g, " ");
 
-      // ISO format for Cal.com
+      // ISO format for Bizcal
       const isoDate = startDate.toISOString().split("T")[0]; // "2025-11-27"
       const isoTimestamp = startDate.toISOString(); // "2025-11-27T05:30:00.000Z"
 

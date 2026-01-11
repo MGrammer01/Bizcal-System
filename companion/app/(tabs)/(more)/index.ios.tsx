@@ -155,7 +155,7 @@ export default function More() {
           For advanced features, visit{" "}
           <Text
             className="text-gray-800"
-            onPress={() => openInAppBrowser("https://app.cal.com", "Cal.com")}
+            onPress={() => openInAppBrowser("https://app.cal.com", "Bizcal")}
           >
             app.cal.com
           </Text>

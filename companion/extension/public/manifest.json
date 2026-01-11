@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Cal.com Companion",
+  "name": "Bizcal",
   "version": "1.7.0",
-  "description": "Your calendar companion for quick booking and scheduling",
+  "description": "The All-in-One Growth Engine for service businesses.",
   "permissions": ["activeTab", "https://companion.cal.com/*", "identity"],
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self'; frame-src 'self' https://companion.cal.com;"
@@ -10,14 +10,14 @@
   "data_collection_permissions": {
     "libraries": [
       {
-        "name": "cal.com",
-        "url": "https://cal.com/privacy",
+        "name": "Bizcal",
+        "url": "https://bizcalagency.com/privacy",
         "purpose": "Booking and scheduling"
       }
     ]
   },
   "action": {
-    "default_title": "Cal.com Companion"
+    "default_title": "Bizcal Agency"
   },
   "background": {
     "service_worker": "background.js"

@@ -381,7 +381,7 @@ describe("BookingAuditViewerService - Integration Tests", () => {
         });
       });
 
-      it("should show 'Cal.com' for SYSTEM actor", async () => {
+      it("should show 'Bizcal' for SYSTEM actor", async () => {
         const mockLog = createMockAuditLog({
           actorType: "SYSTEM",
           actorUserUuid: null,
@@ -399,7 +399,7 @@ describe("BookingAuditViewerService - Integration Tests", () => {
 
         expect(result.auditLogs[0].actor).toMatchObject({
           type: "SYSTEM",
-          displayName: "Cal.com",
+          displayName: "Bizcal",
           displayEmail: null,
           displayAvatar: null,
         });

@@ -7,9 +7,9 @@ const IS_DEV_MODE = Boolean(DEV_API_KEY && DEV_API_KEY.length > 0);
 const BROWSER_TARGET = import.meta.env.BROWSER_TARGET || "chrome";
 
 const devLog = {
-  log: (...args: unknown[]) => IS_DEV_MODE && console.log("[Cal.com]", ...args),
-  warn: (...args: unknown[]) => IS_DEV_MODE && console.warn("[Cal.com]", ...args),
-  error: (...args: unknown[]) => console.error("[Cal.com]", ...args),
+  log: (...args: unknown[]) => IS_DEV_MODE && console.log("[Bizcal]", ...args),
+  warn: (...args: unknown[]) => IS_DEV_MODE && console.warn("[Bizcal]", ...args),
+  error: (...args: unknown[]) => console.error("[Bizcal]", ...args),
 };
 
 /**
@@ -821,7 +821,7 @@ async function getBookingStatus(bookingUid: string): Promise<Booking> {
       throw new Error("You don't have permission to view this booking.");
     }
     if (response.status === 404) {
-      throw new Error("Booking not found in Cal.com.");
+      throw new Error("Booking not found in Bizcal.");
     }
 
     throw new Error(`Failed to get booking status: ${errorMessage}`);
@@ -871,7 +871,7 @@ async function markAttendeeNoShow(
       throw new Error("You don't have permission to modify this booking.");
     }
     if (response.status === 404) {
-      throw new Error("Booking not found in Cal.com.");
+      throw new Error("Booking not found in Bizcal.");
     }
 
     throw new Error(`Failed to mark no-show: ${errorMessage}`);

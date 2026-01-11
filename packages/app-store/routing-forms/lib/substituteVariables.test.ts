@@ -201,10 +201,10 @@ describe("substituteVariables", () => {
   it("should handle text fields with special characters", () => {
     const fields = [createTextField("field1", "projectName", "Project Name")];
     const routeValue = "/project/{projectName}/board";
-    const response = createFormResponse("field1", "Cal.com Platform & API", "Project Name");
+    const response = createFormResponse("field1", "Bizcal Platform & API", "Project Name");
 
     const result = substituteVariables(routeValue, response, fields);
-    expect(result).toBe("/project/Cal.com%20Platform%20%26%20API/board");
+    expect(result).toBe("/project/Bizcal%20Platform%20%26%20API/board");
   });
 
   it("should handle empty text field values", () => {

@@ -25,7 +25,7 @@ export type DefaultLocation = {
 };
 
 /**
- * Default locations available in Cal.com
+ * Default locations available in Bizcal
  * Icons are served from https://app.cal.com/{iconPath}
  */
 export const defaultLocations: DefaultLocation[] = [

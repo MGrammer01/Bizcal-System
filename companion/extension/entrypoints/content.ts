@@ -10,9 +10,9 @@ const IS_DEV_MODE =
   typeof process !== "undefined" && process.env && process.env.NODE_ENV === "development";
 
 const devLog = {
-  log: (...args: unknown[]) => IS_DEV_MODE && console.log("[Cal.com]", ...args),
-  warn: (...args: unknown[]) => IS_DEV_MODE && console.warn("[Cal.com]", ...args),
-  error: (...args: unknown[]) => IS_DEV_MODE && console.error("[Cal.com]", ...args),
+  log: (...args: unknown[]) => IS_DEV_MODE && console.log("[Bizcal]", ...args),
+  warn: (...args: unknown[]) => IS_DEV_MODE && console.warn("[Bizcal]", ...args),
+  error: (...args: unknown[]) => IS_DEV_MODE && console.error("[Bizcal]", ...args),
 };
 
 export default defineContentScript({
@@ -612,7 +612,7 @@ export default defineContentScript({
       let cacheTimestamp: number | null = null;
       const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
 
-      // Function to inject Cal.com button as a new table cell after Send button
+      // Function to inject Bizcal button as a new table cell after Send button
       function injectCalButton() {
         // Look specifically for Gmail compose Send buttons - they have specific attributes
         // Gmail Send button usually has div[role="button"] with specific data attributes inside a td
@@ -640,7 +640,7 @@ export default defineContentScript({
           const composeWindow = sendButton.closest('[role="dialog"]') || sendButton.closest(".nH");
           if (!composeWindow) return;
 
-          // Create new table cell for Cal.com button
+          // Create new table cell for Bizcal button
           const calButtonCell = document.createElement("td");
           calButtonCell.className = "cal-companion-gmail-button";
           calButtonCell.style.cssText = `
@@ -650,7 +650,7 @@ export default defineContentScript({
             border: none;
           `;
 
-          // Create Cal.com button
+          // Create Bizcal button
           const calButton = document.createElement("div");
           calButton.style.cssText = `
             display: inline-flex;
@@ -667,7 +667,7 @@ export default defineContentScript({
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
           `;
 
-          // Add Cal.com icon (official logo)
+          // Add Bizcal icon (official logo)
           calButton.innerHTML = `
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M15.4688 5H17.0887V13.76H15.4688V5Z" fill="white"/>
@@ -687,7 +687,7 @@ export default defineContentScript({
             calButton.style.transform = "scale(1)";
           });
 
-          // Add click handler to show Cal.com menu
+          // Add click handler to show Bizcal menu
           calButton.addEventListener("click", (e) => {
             e.preventDefault();
             e.stopPropagation();
@@ -728,7 +728,7 @@ export default defineContentScript({
             // Array to track tooltips for cleanup
             const tooltipsToCleanup: HTMLElement[] = [];
 
-            // Fetch event types from Cal.com API
+            // Fetch event types from Bizcal API
             fetchEventTypes(menu, tooltipsToCleanup);
 
             // Position menu relative to button
@@ -799,7 +799,7 @@ export default defineContentScript({
           }
 
           function _openCalSidebar() {
-            // Open Cal.com sidebar or quick schedule flow
+            // Open Bizcal sidebar or quick schedule flow
             if (isClosed) {
               // Trigger sidebar open
               chrome.runtime.sendMessage({ action: "icon-clicked" });
@@ -1286,7 +1286,7 @@ export default defineContentScript({
             slug: string;
             users?: Array<{ username?: string }>;
           }): void {
-            // Construct the Cal.com booking link
+            // Construct the Bizcal booking link
             const bookingUrl = `https://cal.com/${eventType.users?.[0]?.username || "user"}/${
               eventType.slug
             }`;
@@ -1313,7 +1313,7 @@ export default defineContentScript({
             slug: string;
             users?: Array<{ username?: string }>;
           }): void {
-            // Construct the Cal.com booking link
+            // Construct the Bizcal booking link
             const bookingUrl = `https://cal.com/${eventType.users?.[0]?.username || "user"}/${
               eventType.slug
             }`;
@@ -1454,7 +1454,7 @@ export default defineContentScript({
           }
 
           // Add tooltip
-          calButton.title = "Schedule with Cal.com";
+          calButton.title = "Schedule with Bizcal";
 
           // Add button to cell
           calButtonCell.appendChild(calButton);
@@ -1543,7 +1543,7 @@ export default defineContentScript({
       }
 
       function openCalSidebar() {
-        // Open Cal.com sidebar or quick schedule flow
+        // Open Bizcal sidebar or quick schedule flow
         if (isClosed) {
           // Trigger sidebar open
           chrome.runtime.sendMessage({ action: "icon-clicked" });
@@ -2026,7 +2026,7 @@ export default defineContentScript({
         slug: string;
         users?: Array<{ username?: string }>;
       }) {
-        // Construct the Cal.com booking link
+        // Construct the Bizcal booking link
         const bookingUrl = `https://cal.com/${eventType.users?.[0]?.username || "user"}/${
           eventType.slug
         }`;
@@ -2169,8 +2169,8 @@ export default defineContentScript({
       }
 
       /**
-       * Generate HTML email embed for Cal.com booking
-       * Based on the email embed feature in main Cal.com codebase
+       * Generate HTML email embed for Bizcal booking
+       * Based on the email embed feature in main Bizcal codebase
        */
       function generateEmailEmbedHTML(params: {
         eventType: { slug: string; title?: string };
@@ -2289,7 +2289,7 @@ export default defineContentScript({
               </a>
             </div>
             <div style="border-top: 1px solid #CCCCCC; margin-top: 8px; padding-top: 8px; text-align: right; font-size: 12px; color: #666;">
-              <span>Powered by</span> <b style="color: black;">Cal.com</b>
+              <span>Powered by</span> <b style="color: black;">Bizcal</b>
             </div>
           </div>
           <p><br></p>
@@ -2565,7 +2565,7 @@ export default defineContentScript({
       }
 
       /**
-       * Watch for Google Calendar scheduling chips and add Cal.com suggestion button
+       * Watch for Google Calendar scheduling chips and add Bizcal suggestion button
        */
       function watchForGoogleChips() {
         try {
@@ -2752,7 +2752,7 @@ export default defineContentScript({
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         `;
 
-          // Cal.com icon with circular background
+          // Bizcal icon with circular background
           const icon = document.createElement("div");
           icon.style.cssText = `
           width: 32px;
@@ -2774,7 +2774,7 @@ export default defineContentScript({
 
           // Text with duration indicator
           const text = document.createElement("span");
-          text.textContent = `Suggest ${parsedData.detectedDuration}min Cal.com links`;
+          text.textContent = `Suggest ${parsedData.detectedDuration}min Bizcal links`;
           text.setAttribute("contenteditable", "false"); // Make text non-editable
           text.style.cssText = `
           color: #1f1f1f;
@@ -2948,7 +2948,7 @@ export default defineContentScript({
               const inserted = insertGmailHTML(embedHTML, chipElement);
 
               if (inserted) {
-                showGmailNotification("Cal.com embed inserted!", "success");
+                showGmailNotification("Bizcal embed inserted!", "success");
                 devLog.log("Email embed inserted successfully");
 
                 // Immediately remove the Google chip and action bar
@@ -3145,7 +3145,7 @@ export default defineContentScript({
       }
 
       /**
-       * Show Cal.com suggestion menu for Google Calendar chip - CENTERED FULL-SCREEN MODAL
+       * Show Bizcal suggestion menu for Google Calendar chip - CENTERED FULL-SCREEN MODAL
        */
       async function showCalcomSuggestionMenu(
         chipElement: HTMLElement,
@@ -3227,7 +3227,7 @@ export default defineContentScript({
         `;
         header.innerHTML = `
           <div>
-            <div style="font-weight: 600; font-size: 16px; color: #000;">📅 Suggest Cal.com Links</div>
+            <div style="font-weight: 600; font-size: 16px; color: #000;">📅 Suggest Bizcal Links</div>
             <div style="font-size: 13px; color: #666; margin-top: 4px;">${
               parsedData.slots.length
             } time slot${parsedData.slots.length > 1 ? "s" : ""} • ${
@@ -3395,7 +3395,7 @@ export default defineContentScript({
               const createUrl = `https://app.cal.com/event-types?dialog=new&eventPage=${username}`;
               window.open(createUrl, "_blank");
               showGmailNotification(
-                `Opening Cal.com to create ${parsedData.detectedDuration}min event type`,
+                `Opening Bizcal to create ${parsedData.detectedDuration}min event type`,
                 "success"
               );
 
@@ -3669,7 +3669,7 @@ export default defineContentScript({
               const selectedSlug = selectedEventType.slug;
               const selectedUsername = selectedEventType.users?.[0]?.username || "user";
 
-              // Generate Cal.com URL with slot parameters
+              // Generate Bizcal URL with slot parameters
               const baseUrl = `https://cal.com/${selectedUsername}/${selectedSlug}`;
               const params = new URLSearchParams({
                 overlayCalendar: "true",
@@ -3684,7 +3684,7 @@ export default defineContentScript({
               const inserted = insertGmailText(calcomUrl, chipElement);
 
               if (inserted) {
-                showGmailNotification("Cal.com link inserted!", "success");
+                showGmailNotification("Bizcal link inserted!", "success");
                 backdrop.remove();
 
                 // Immediately remove the Google chip and its action bar

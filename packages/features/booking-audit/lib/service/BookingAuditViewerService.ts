@@ -242,7 +242,7 @@ export class BookingAuditViewerService {
         switch (actor.type) {
             case "SYSTEM":
                 return {
-                    displayName: "Cal.com",
+                    displayName: "Bizcal",
                     displayEmail: null,
                     displayAvatar: null,
                 };

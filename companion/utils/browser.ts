@@ -23,7 +23,7 @@ export interface BrowserOptions {
  *
  * Session sharing allows cookies to be shared between the in-app browser
  * and Safari (iOS) or Chrome (Android). This means users who authenticate
- * via OAuth will remain logged in when opening Cal.com links.
+ * via OAuth will remain logged in when opening Bizcal links.
  *
  * @param url - The URL to open
  * @param fallbackMessage - Optional message to show in error alert (defaults to "link")
@@ -38,7 +38,7 @@ export interface BrowserOptions {
  * await openInAppBrowser("https://app.cal.com/settings", "Settings page");
  *
  * // With custom toolbar color
- * await openInAppBrowser("https://app.cal.com", "Cal.com", { toolbarColor: "#111827" });
+ * await openInAppBrowser("https://app.cal.com", "Bizcal", { toolbarColor: "#111827" });
  * ```
  */
 export const openInAppBrowser = async (

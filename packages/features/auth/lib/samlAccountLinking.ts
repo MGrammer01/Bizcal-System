@@ -82,7 +82,7 @@ export async function validateSamlAccountConversion(
 
   const samlOrgTeamId = getTeamIdFromSamlTenant(samlTenant);
   if (!samlOrgTeamId) {
-    // For hosted Cal.com: tenant must be in "team-{id}" format for org SSO
+    // For hosted Bizcal: tenant must be in "team-{id}" format for org SSO
     // For self-hosted: allow non-org tenants (admin controls the setup)
     if (HOSTED_CAL_FEATURES) {
       log.warn(`Blocking ${conversionContext} conversion - invalid tenant format for hosted`, {

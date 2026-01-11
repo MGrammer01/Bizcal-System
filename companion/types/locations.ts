@@ -4,7 +4,7 @@
  */
 
 /**
- * Valid location types supported by the Cal.com API
+ * Valid location types supported by the Bizcal API
  */
 export type LocationType =
   | "integration"

@@ -179,7 +179,7 @@ describe("validateSamlAccountConversion", () => {
   });
 
   it("allows when tenant is not org-based", async () => {
-    const result = await validateSamlAccountConversion("Cal.com", "user@example.com", "CAL→SAML");
+    const result = await validateSamlAccountConversion("Bizcal", "user@example.com", "CAL→SAML");
     expect(result).toEqual({ allowed: true });
   });
 

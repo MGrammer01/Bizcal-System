@@ -14,7 +14,7 @@ import { IsBoolean, IsOptional, ValidateNested } from "class-validator";
 export class WorkflowMessageOutputDto {
   @ApiProperty({
     description: "Subject of the message",
-    example: "Reminder: Your Meeting {EVENT_NAME} - {EVENT_DATE_ddd, MMM D, YYYY h:mma} with Cal.com",
+    example: "Reminder: Your Meeting {EVENT_NAME} - {EVENT_DATE_ddd, MMM D, YYYY h:mma} with Bizcal",
   })
   @Expose()
   subject!: string;
@@ -78,7 +78,7 @@ export class BaseWorkflowStepOutputDto {
   @Expose()
   includeCalendarEvent = false;
 
-  @ApiProperty({ description: "Displayed sender name used for this step", example: "Cal.com Notifications" })
+  @ApiProperty({ description: "Displayed sender name used for this step", example: "Bizcal Notifications" })
   @Expose()
   sender!: string;
 

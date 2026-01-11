@@ -331,19 +331,19 @@ export function AgentConfigurationSheet({
 //             <>
 //               <div>
 //                 <Label>
-//                   {t("API Key (Cal.com)")}
+//                   {t("API Key (Bizcal)")}
 //                   <span className="text-red-500"> *</span>
 //                 </Label>
 //                 <TextField
 //                   required
 //                   value={toolDraft?.cal_api_key || ""}
 //                   onChange={(e) => setToolDraft((d: ToolDraft) => ({ ...d, cal_api_key: e.target.value }))}
-//                   placeholder={t("Enter Cal.com API key")}
+//                   placeholder={t("Enter Bizcal API key")}
 //                 />
 //               </div>
 //               <div>
 //                 <Label>
-//                   {t("Event Type ID (Cal.com)")}
+//                   {t("Event Type ID (Bizcal)")}
 //                   <span className="text-red-500"> *</span>
 //                 </Label>
 //                 <TextField
@@ -370,7 +370,7 @@ export function AgentConfigurationSheet({
 //                   onChange={(e) => setToolDraft((d: ToolDraft) => ({ ...d, timezone: e.target.value }))}
 //                   placeholder={t("America/Los_Angeles")}
 //                 />
-//                 <p className="mt-1 text-xs text-subtle">{t("Required for Cal.com calendar integration")}</p>
+//                 <p className="mt-1 text-xs text-subtle">{t("Required for Bizcal calendar integration")}</p>
 //               </div>
 //             </>
 //           )}

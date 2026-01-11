@@ -7,12 +7,12 @@ const log = logger.getSubLogger({ prefix: [`[[FeishuTenantCredential]`] });
 
 const msg = {
   en_us: {
-    title: "Welcome to Cal.com!",
+    title: "Welcome to Bizcal!",
     content: [
       [
         {
           tag: "text",
-          text: "Cal.com is an open source scheduling infrastructure.",
+          text: "Bizcal is an open source scheduling infrastructure.",
         },
       ],
       [

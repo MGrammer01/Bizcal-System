@@ -69,7 +69,7 @@ describe("appByIdHandler", () => {
       slug: "daily-video",
       categories: ["conferencing"],
       logo: "icon.svg",
-      publisher: "Cal.com",
+      publisher: "Bizcal",
       url: "https://daily.co",
       email: "help@cal.com",
       isGlobal: true,

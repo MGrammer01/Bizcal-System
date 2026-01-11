@@ -56,7 +56,7 @@ export default defineConfig({
   publicDir: "extension/public",
   outDir: ".output",
   manifest: {
-    name: "Cal.com Companion",
+    name: "Bizcal Companion",
     version: "1.7.5",
     description: "Your calendar companion for quick booking and scheduling",
     permissions: ["activeTab", "storage", "identity"],
@@ -75,7 +75,7 @@ export default defineConfig({
         : "script-src 'self'; object-src 'self'; frame-src 'self' https://companion.cal.com",
     },
     action: {
-      default_title: "Cal.com Companion",
+      default_title: "Bizcal Companion",
       default_icon: {
         "16": "icon-16.png",
         "48": "icon-48.png",

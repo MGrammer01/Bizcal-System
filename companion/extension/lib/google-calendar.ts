@@ -729,7 +729,7 @@ async function handleMarkNoShow(
 
   // If no booking UID, show error
   if (!bookingUid) {
-    showAlert("Not a Cal.com booking", "info");
+    showAlert("Not a Bizcal booking", "info");
     return;
   }
 
@@ -825,7 +825,7 @@ async function handleMarkNoShow(
           } else if (response.error?.includes("403") || response.error?.includes("permission")) {
             errorMessage = "You don't have permission to modify this booking.";
           } else if (response.error?.includes("404") || response.error?.includes("not found")) {
-            errorMessage = "Booking not found in Cal.com.";
+            errorMessage = "Booking not found in Bizcal.";
           } else if (response.error?.includes("Network") || response.error?.includes("network")) {
             errorMessage = "Network error. Please check your connection and try again.";
           }
@@ -961,7 +961,7 @@ async function injectNoShowButtons(eventPopup: Element): Promise<void> {
     return;
   }
 
-  // Per requirements: Show button even for non-Cal.com events, but it will show error on click
+  // Per requirements: Show button even for non-Bizcal events, but it will show error on click
   // This allows users to see the feature is available
 
   const existingButtonContainers = Array.from(
@@ -1199,10 +1199,10 @@ function observeEventPopups(): void {
     }
 
     const text = element.textContent || "";
-    // Check if this looks like a Cal.com event
+    // Check if this looks like a Bizcal event
     const isCalComEvent =
       text.includes("cal.com") ||
-      text.includes("Cal.com") ||
+      text.includes("Bizcal") ||
       text.includes("booking") ||
       extractBookingUid(text) !== null;
 
@@ -1354,11 +1354,11 @@ function observeEventPopups(): void {
         return;
       }
 
-      // Check if this is a Cal.com event
+      // Check if this is a Bizcal event
       const text = popup.textContent || "";
       const isCalComEvent =
         text.includes("cal.com") ||
-        text.includes("Cal.com") ||
+        text.includes("Bizcal") ||
         text.includes("booking") ||
         extractBookingUid(text) !== null;
 

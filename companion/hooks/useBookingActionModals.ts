@@ -281,7 +281,7 @@ export function useBookingActionModals(): UseBookingActionModalsReturn {
 
     Alert.alert(
       "Request Reschedule",
-      "This action will open the Cal.com web app where you can request a reschedule from the attendee.",
+      "This action will open the Bizcal web app where you can request a reschedule from the attendee.",
       [
         { text: "Cancel", style: "cancel" },
         {
