@@ -42,7 +42,7 @@ export const COMPANY_NAME =
   process.env.NEXT_PUBLIC_COMPANY_NAME || "Bizcal Agency";
 export const SENDER_ID = process.env.NEXT_PUBLIC_SENDER_ID || "Bizcal Agency";
 export const SENDER_NAME =
-  process.env.NEXT_PUBLIC_SENDGRID_SENDER_NAME || "Bizcal";
+  process.env.NEXT_PUBLIC_SENDGRID_SENDER_NAME || "Bizcal Agency";
 export const EMAIL_FROM_NAME = process.env.EMAIL_FROM_NAME || APP_NAME;
 
 // This is the URL from which all Cal Links and their assets are served.
@@ -127,7 +127,7 @@ export const ANDROID_CHROME_ICON_256 = "/android-chrome-256x256.png";
 export const ROADMAP = "https://book.bizcalagency.com/roadmap";
 export const DESKTOP_APP_LINK = "";
 export const JOIN_COMMUNITY = "";
-export const POWERED_BY_URL = "https://go.cal.com/booking";
+export const POWERED_BY_URL = "https://bizcalagency.com/roadmap";
 export const DOCS_URL = "https://cal.com/docs";
 export const DEVELOPER_DOCS = "https://developer.cal.com";
 export const SEO_IMG_DEFAULT = `${CAL_URL}/og-image.png`;

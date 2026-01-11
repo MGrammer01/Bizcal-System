@@ -366,7 +366,7 @@ export const AppPage = ({
               )}
               •{" "}
               <a target="_blank" rel="noreferrer" href={website}>
-                {t("published_by", { author })}
+                {t("published_by", { COMPANY_NAME })}
               </a>
             </h2>
             {isTemplate && (
@@ -466,10 +466,10 @@ export const AppPage = ({
                 target="_blank"
                 rel="noreferrer"
                 className="text-emphasis font-normal no-underline hover:underline"
-                href={`mailto:${email}`}>
+                href={`mailto:${SUPPORT_MAIL_ADDRESS}`}>
                 <Icon name="mail" className="text-subtle -mt-px mr-1 inline h-4 w-4" />
 
-                {email}
+                {SUPPORT_MAIL_ADDRESS}
               </a>
             </li>
           )}

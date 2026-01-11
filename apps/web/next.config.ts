@@ -255,7 +255,29 @@ const nextConfig = (phase: string): NextConfig => {
       },
     },
     images: {
-      unoptimized: true,
+    unoptimized: true,
+    domains: [
+      'cal.com',
+      'app-store.cal.com',
+      'avatars.githubusercontent.com',
+      'lh3.googleusercontent.com',
+      'logo.clearbit.com',
+      'cal.ai',
+    ],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**.cal.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cal.com',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.githubusercontent.com',
+      },
+    ],
     },
     turbopack: {},
     async rewrites() {
@@ -430,7 +452,7 @@ const nextConfig = (phase: string): NextConfig => {
           has: [
             {
               type: "host" as const,
-              value: "cal.com",
+              value: "book.bizcalagency.com",
             },
           ],
           headers: [
