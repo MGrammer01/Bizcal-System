@@ -25,7 +25,7 @@ export default function Credits() {
       </Link>{" "}
       {hasMounted && (
         <>
-          <Link href="#" target="_blank" className="hover:underline">
+          <Link href="#" className="hover:underline">
             {CalComVersion}
           </Link>
           {vercelCommitHash && IS_CALCOM ? (

@@ -204,7 +204,7 @@ export const AppPage = ({
       return (
         <Button
           onClick={() => handleAppInstall()}
-          className="mt-2"
+          className="mt-2"  
           StartIcon="external-link"
           loading={isLoading}
           disabled={isLoading}>
@@ -366,7 +366,7 @@ export const AppPage = ({
               )}
               •{" "}
               <a target="_blank" rel="noreferrer" href={website}>
-                {t("published_by", { COMPANY_NAME })}
+                {COMPANY_NAME}
               </a>
             </h2>
             {isTemplate && (
