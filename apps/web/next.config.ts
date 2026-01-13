@@ -358,6 +358,10 @@ const nextConfig = (phase: string): NextConfig => {
 
       const afterFiles = [
         {
+          source: "/app-store/:path*",
+          destination: "https://cal.com/app-store/:path*",
+        },
+        {
           source: "/org/:slug",
           destination: "/team/:slug",
         },
