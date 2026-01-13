@@ -365,7 +365,7 @@ export const AppPage = ({
                 </>
               )}
               •{" "}
-              <a target="_blank" rel="noreferrer" href={website}>
+              <a rel="noreferrer" href="#">
                 {COMPANY_NAME}
               </a>
             </h2>
