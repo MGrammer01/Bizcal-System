@@ -52,21 +52,21 @@ const makeAbsoluteUrl = (url: string) =>
 
 const OG_ASSETS = {
   meeting: {
-    id: "bizcal-meeting-og-v1", // Bump version when changing Meeting component structure/styling
+    id: "meeting-og-image-v2", // Bump version when changing Meeting component structure/styling
     logo: LOGO,
     logoWidth: "350",
     avatarSize: "160",
     variant: "dark" as const,
   },
   app: {
-    id: "bizcal-og-image-v1", // Bump version when changing App component structure/styling
+    id: "app-og-image-v2", // Bump version when changing App component structure/styling
     logo: LOGO,
     logoWidth: "150",
     iconSize: "172",
     variant: "light" as const,
   },
   generic: {
-    id: "bizcal-og-image-v1", // Bump version when changing Generic component structure/styling
+    id: "generic-og-image-v2", // Bump version when changing Generic component structure/styling
     logo: "cal-logo-word-black.svg",
     logoWidth: "350",
     variant: "light" as const,
