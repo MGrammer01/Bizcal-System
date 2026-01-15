@@ -1,7 +1,7 @@
 {
-    "name": "Cal.com",
-    "short_name": "Cal.com",
-    "description": "Scheduling infrastructure for absolutely everyone.",
+    "name": "Bizcal",
+    "short_name": "Bizcal",
+    "description": "The All-in-One Growth Engine for service businesses.",
     "icons": [
         {
             "src": "/api/logo?type=android-chrome-192",
